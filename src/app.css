@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.title-text-gradient {
+	@apply text-transparent bg-clip-text bg-gradient-to-br from-[#09C6F8] to-[#0263ED];
+}
+
+.title-text-gradient-2 {
+	@apply text-transparent bg-clip-text bg-gradient-to-br from-[#09C6F8] to-[#0263ED];
+}
+
+
+:root {
+    --header-height: 3.5rem;
+}
