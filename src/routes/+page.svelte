@@ -1,8 +1,8 @@
 <script>
 	import Header from '$lib/components/layouts/Header.svelte';
-	import Banner from '$lib/components/Banner.svelte';
+	import Banner2 from '$lib/components/Banner2.svelte';
 	import TitleSection from '$lib/components/TitleSection.svelte';
-	import CasinoChoiceCard from '$lib/components/CasinoChoiceCard.svelte';
+	import CasinoChoiceCard2 from '$lib/components/CasinoChoiceCard2.svelte';
 	import SubTitleSection from '$lib/components/SubTitleSection.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import CasinoReviewSmallCard from '$lib/components/CasinoReviewSmallCard.svelte';
@@ -14,7 +14,7 @@
 	let casinoChoices = [
 		{
 			title: 'Casino 1',
-			imageSrc: 'https://via.placeholder.com/150',
+			imageSrc: '/logos/spin_casino_logo.svg',
 			star: 4,
 			color: '#CC99FF',
 			siteName: 'Casino 1',
@@ -159,19 +159,19 @@
 	<Header />
 	<div class="content-container">
 		<content class="pt-9">
-			<Banner />
+			<Banner2 />
 
 			<div class="my-16" />
 			<div class="w-full max-w-[1120px] m-auto">
 				<TitleSection
-					title="The #1 directory for online casinos and sportsbooks"
-					subtitle="Our team of seasoned gambling experts has successfully paired thousands of users with their ideal gambling site"
+					title="The #1 Hub for casino and sportsbook reviews"
+					subtitle="Our team of seasoned gambling experts has successfully paired thousands of users with their ideal online casino"
 				/>
 
 				<div class="flex flex-col justify-center items-center gap-8">
 					<div class="flex flex-row gap-8 flex-wrap justify-center items-center">
 						{#each casinoChoices as casinoChoice}
-							<CasinoChoiceCard {...casinoChoice} />
+							<CasinoChoiceCard2 {...casinoChoice} />
 						{/each}
 					</div>
 					<Button text="View More" type="TYPE2" href="/" />
@@ -242,7 +242,8 @@
 
 <style lang="postcss">
 	.content-container {
-		@apply bg-gray-200 flex flex-col;
+		@apply flex flex-col;
+		background-color: var(--main-bg);
 
 		min-height: calc(100vh - var(--header-height));
 		width: 100%;

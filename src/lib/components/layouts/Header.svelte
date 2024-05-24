@@ -21,7 +21,11 @@
 		<nav>
 			<ul>
 				{#each items as item}
-					<li><a href={item.path}>{item.name}</a></li>
+					<li>
+						<a href={item.path}>
+							{item.name}
+						</a>
+					</li>
 				{/each}
 			</ul>
 		</nav>
@@ -30,23 +34,25 @@
 
 <style lang="postcss">
 	header {
-		@apply bg-white text-black p-4 ;
-        height: var(--header-height);
+		@apply bg-white text-black p-4;
+		min-height: var(--header-height);
 	}
 
 	.header-container {
 		@apply container mx-auto h-full;
-		@apply flex flex-row justify-between items-center;
+		@apply flex flex-col sm:flex-row justify-between items-center;
 	}
 
 	ul {
-		@apply flex space-x-4;
+		@apply flex flex-row flex-wrap justify-center sm:justify-end space-x-4;
 	}
 
 	li {
-		@apply list-none text-gray-400 font-extrabold;
+		@apply list-none w-32 h-10 text-left flex justify-center sm:justify-center items-center;
+		color: var(--text-color-2);
+	
 	}
 	h1 {
-        @apply text-2xl font-extrabold;
+		@apply text-5xl py-8 sm:p-0 sm:text-2xl font-extrabold;
 	}
 </style>

@@ -60,12 +60,12 @@
 
 <footer>
 	<div class="container m-auto ">
-		<div class="flex flex-row justify-between py-16">
+		<div class="flex flex-col sm:flex-row justify-between py-16">
 			
-            <h2 class="text-6xl text-white font-extrabold px-4 ">
+            <h2 class="text-6xl text-white font-extrabold px-4 pb-16 sm:pb-0">
                 BonusHub
             </h2>
-			<div class="flex flex-row gap-4">
+			<div class="flex flex-row gap-4 px-8 sm:px-0">
 				<div class="flex flex-col gap-4">
                     <h3 class="text-white font-bold text-2xl">
                         Bonuses
